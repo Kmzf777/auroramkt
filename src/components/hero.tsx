@@ -8,7 +8,7 @@ const Hero = () => {
       <motion.video
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1, 1, 0] }}
-        transition={{ duration: 10, times: [0, 0.1, 0.8, 0.9] }}
+        transition={{ duration: 8, times: [0, 0.125, 0.9875, 0.99875] }}
         autoPlay
         muted
         playsInline
@@ -17,14 +17,14 @@ const Hero = () => {
       />
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: [0, 0, 1] }}
-        transition={{ duration: 10, times: [0, 0.8, 0.9] }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 7.99 }}
         className="text-center z-10"
       >
-        <h1 className="text-5xl md:text-7xl font-bold">
-          Aurora Marketing
+        <h1 className="text-5xl md:text-7xl font-bold uppercase font-[family-name:var(--font-audiowide)] tracking-tight">
+          AURORA MARKETING
         </h1>
-        <p className="mt-4 text-lg md:text-2xl text-green-300">
+        <p className="mt-4 text-lg md:text-2xl text-green-300 font-[family-name:var(--font-poppins)]">
           Desperte o potencial do seu negócio.
         </p>
       </motion.div>
