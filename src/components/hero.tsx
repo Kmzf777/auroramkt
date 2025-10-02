@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen text-white overflow-hidden bg-black">
+    <div className="relative flex flex-col items-center justify-center min-h-screen text-white overflow-hidden bg-black video-container">
       <motion.video
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1, 1, 0] }}
@@ -12,8 +12,19 @@ const Hero = () => {
         autoPlay
         muted
         playsInline
+        preload="auto"
+        disablePictureInPicture
+        disableRemotePlayback
         src="/hero_section_video.mp4"
         className="absolute top-0 left-0 w-full h-full object-cover"
+        style={{
+          filter: 'contrast(1.1) brightness(1.05) saturate(1.1)',
+          imageRendering: 'crisp-edges',
+          WebkitBackfaceVisibility: 'hidden',
+          backfaceVisibility: 'hidden',
+          transform: 'translateZ(0)',
+          willChange: 'opacity'
+        }}
       />
       <motion.div
         initial={{ opacity: 0 }}

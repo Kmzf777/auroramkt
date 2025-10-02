@@ -6,3 +6,25 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+/* Otimizações para qualidade máxima de vídeo */
+video {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  will-change: opacity, transform;
+}
+
+/* Força aceleração de hardware */
+.video-container {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
